@@ -8,9 +8,9 @@ namespace Homework1
         // Задание 1. Найти среднее арифметическое двух чисел
         public static double FirstTask(double firstValue, double secondValue) => (firstValue + secondValue) / 2;
 
-        // Задание 2. Найти сумму и произведение двух чисел
-        public static void SecondTask(double firstValue, double secondValue) =>
-            Console.WriteLine($"\nСумма чисел: {firstValue + secondValue}\nПроизведение чисел: {firstValue * secondValue}");
+        // Задание 2. Найти сумму и произведение трёх чисел
+        public static void SecondTask(double firstValue, double secondValue, double thirdValue) =>
+            Console.WriteLine($"\nСумма чисел: {firstValue + secondValue + thirdValue}\nПроизведение чисел: {firstValue * secondValue * thirdValue}");
 
         // Задание 3. Мини-конвертер валют (USD/EUR -> UAH)
         public static void ThirdTask(double money, int currency)
@@ -38,12 +38,14 @@ namespace Homework1
                 double.TryParse(Console.ReadLine(), out double firstTaskSecondValue);
                 Console.WriteLine($"РЕЗУЛЬТАТ: {FirstTask(firstTaskFirstValue, firstTaskSecondValue)}");
 
-                Console.Write("\n\n\nЗадание 2. Найти сумму и произведение двух чисел\nВведите первое число: ");
-                double.TryParse(Console.ReadLine(), out double seconfTaskFirstValue);
+                Console.Write("\n\n\nЗадание 2. Найти сумму и произведение трёх чисел\nВведите первое число: ");
+                double.TryParse(Console.ReadLine(), out double secondTaskFirstValue);
                 Console.Write("Введите второе число: ");
-                double.TryParse(Console.ReadLine(), out double seconfTaskSecondValue);
+                double.TryParse(Console.ReadLine(), out double secondTaskSecondValue);
+                Console.Write("Введите второе число: ");
+                double.TryParse(Console.ReadLine(), out double secondTaskThirdValue);
                 Console.Write("РЕЗУЛЬТАТ: ");
-                SecondTask(seconfTaskFirstValue, seconfTaskSecondValue);
+                SecondTask(secondTaskFirstValue, secondTaskSecondValue, secondTaskThirdValue);
 
                 Console.Write("\n\n\nЗадание 3. Мини-конвертер валют (USD/EUR -> UAH)\nВыберите валюту:\n1. USD\n2. EUR\nВаш выбор: ");
                 int.TryParse(Console.ReadLine(), out int currencyChoice);
